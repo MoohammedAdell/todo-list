@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&family=Syncopate:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  background-color: #0f172a; 
+  color: #f8fafc;
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  background: linear-gradient(90deg, #0f172a, #1e293b);
+  font-family: "Syncopate", sans-serif;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 4rem 0;
+  color: #22d3ee;
+  letter-spacing: 12px;
+  text-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Form Section */
+.add-form {
+  background-color: #1e293b;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #94a3b8;
+  margin-right: 1rem;
+}
+
+/* Global Controls */
+button, select, input {
+  background: rgba(15, 23, 42, 0.8);
+  color: #f1f5f9;
+  font-family: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.2rem 2.4rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Custom Select Styling */
+select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 4rem !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2322d3ee'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.2rem center;
+  background-size: 1.6rem;
+}
+
+select option {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+input:focus, select:focus {
+  border-color: #22d3ee;
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.1);
+}
+
+.add-form button {
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #22d3ee, #818cf8);
+  color: #0f172a;
+  border: none;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(34, 211, 238, 0.2);
+}
+
+.add-form button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* List Section */
+.list {
+  background-color: #0f172a;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.list ul {
+  list-style: none;
+  width: 90%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  overflow-y: auto;
+}
+
+.list li {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.5rem 2rem;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s;
+}
+
+.list li:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-3px);
+}
+
+.list li button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  padding: 0;
+  margin-left: auto;
+  color: #ef4444;
+  opacity: 0.6;
+}
+
+.list li button:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+input[type="checkbox"] {
+  height: 2rem;
+  width: 2rem;
+  accent-color: #22d3ee;
+  cursor: pointer;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.actions select, .actions button {
+  background: transparent;
+  font-size: 1.3rem;
+  color: #94a3b8;
+  border-color: rgba(148, 163, 184, 0.3);
+  padding: 0.8rem 2rem;
+}
+
+.actions button:hover {
+  color: #ef4444;
+  border-color: #ef4444;
+}
+
+/* Footer Stats */
+.stats {
+  background: linear-gradient(90deg, #818cf8, #22d3ee);
+  color: #0f172a;
+  text-align: center;
+  font-weight: 800;
+  padding: 2.5rem 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+}
