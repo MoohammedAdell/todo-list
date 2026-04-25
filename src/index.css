@@ -195,3 +195,71 @@ input[type="checkbox"] {
   font-size: 1.8rem;
   letter-spacing: 0.5px;
 }
+/* --- التعديلات الخاصة بالـ Responsiveness --- */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%; /* تصغير حجم الخط العام قليلاً */
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    letter-spacing: 6px;
+    padding: 3rem 0;
+  }
+
+  .add-form {
+    flex-direction: column; /* ترتيب عناصر الإدخال فوق بعضها */
+    padding: 2.5rem 2rem;
+    gap: 2rem;
+  }
+
+  .add-form h3 {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  input, select, .add-form button {
+    width: 100%; /* جعل المدخلات تأخذ العرض الكامل */
+    max-width: 400px;
+  }
+
+  .list {
+    padding: 2rem 0;
+  }
+
+  .list ul {
+    width: 95%;
+    grid-template-columns: 1fr; /* عرض عنصر واحد في السطر */
+  }
+
+  .actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.8rem;
+    letter-spacing: 4px;
+  }
+
+  .stats {
+    font-size: 1.4rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .list li {
+    padding: 1.2rem;
+  }
+}
+
+/* تحسين تجربة التمرير على الموبايل */
+.list ul {
+  max-height: 60vh; /* تحديد ارتفاع القائمة عشان الفوتر يفضل مكانه */
+  scrollbar-width: thin;
+}
